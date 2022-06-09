@@ -1,0 +1,15 @@
+{% extends 'layouts/layout.html' %}
+
+
+    {% block title %}
+        {{category.name}}
+    {% endblock  %}
+
+    {% block content %}
+        <h1 class="tittle">{{category.name}}</h1>
+        <p>{{category.description}}</p>
+        
+        {% include 'articles/articles.html' with articles=category.articles.all %}
+
+
+    {% endblock  %}
